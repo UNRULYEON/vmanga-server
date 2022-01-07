@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "baseUrl": "src",
+    "paths": {
+      "@routes": ["routes/index"],
+      "@middlware": ["middleware/index"],
+      "@utils": ["utils/index"]
+    }
+  }
+}
