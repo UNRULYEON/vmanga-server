@@ -1,13 +1,10 @@
 import dotenv from "dotenv";
 import express from "express";
-import { initializeApp } from "firebase-admin/app";
 import routes from "@routes";
 import { logger } from "@utils";
 import { error_middleware } from "@middlware";
 
 dotenv.config();
-
-initializeApp();
 
 const app = express();
 const port = process.env.PORT || 3000;
