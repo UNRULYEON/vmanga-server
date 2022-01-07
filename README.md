@@ -23,3 +23,6 @@ nvm use
 ```bash
 yarn
 ```
+
+3. Create a `.env` and copy the contents of `.env.development` into it.
+4. Make sure the Firebase Admin SDK JSON file is in the root of this project

@@ -1,5 +1,6 @@
 import { NextFunction, Request as ExpressRequest, Response as ExpressResponse, Router } from "express";
 
+import login from "./login/router";
 import health from "./health/router";
 
 type Route = {
@@ -12,6 +13,9 @@ type Response<P> = P & ExpressResponse;
 
 export type RouteFunction<T = {}, P = {}> = (req: Request<T>, res: Response<P>, next: NextFunction) => void;
 
-const routes: Route[] = [{ path: "/health", router: health }];
+const routes: Route[] = [
+  { path: "/health", router: health },
+  { path: "/login", router: login },
+];
 
 export default routes;
