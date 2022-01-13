@@ -1,7 +1,7 @@
 import { Color, logger } from "@utils";
 import { NextFunction, Request, Response } from "express";
 
-import { ValidationErrorType } from "@middlware";
+import { ValidationErrorType } from "@middleware";
 
 type ErrorType = "error" | "warning" | "notice";
 

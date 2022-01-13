@@ -3,7 +3,8 @@
     "baseUrl": "src",
     "paths": {
       "@routes": ["routes/index"],
-      "@middlware": ["middleware/index"],
+      "@middleware": ["middleware/index"],
+      "@sources": ["sources/index"],
       "@utils": ["utils/index"]
     }
   }

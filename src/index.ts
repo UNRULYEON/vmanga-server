@@ -2,7 +2,7 @@ import dotenv from "dotenv";
 import express from "express";
 import routes from "@routes";
 import { logger } from "@utils";
-import { error_middleware } from "@middlware";
+import { error_middleware } from "@middleware";
 
 dotenv.config();
 

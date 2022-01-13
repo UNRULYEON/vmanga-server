@@ -1,7 +1,7 @@
 import { AnySchema, ValidationError } from "yup";
 import { NextFunction, Request, Response } from "express";
 
-import { MWError } from "@middlware";
+import { MWError } from "@middleware";
 
 export type ValidationErrorType = {
   field: string;
