@@ -1,0 +1,36 @@
+version: "3.8"
+
+services:
+  vmanga:
+    container_name: vmanga
+    build:
+      context: .
+      target: development
+    command: yarn dev
+    depends_on:
+      - postgres
+    ports:
+      - 3000:3000
+    env_file:
+      - ./.env.local
+    environment:
+      NODE_ENV: development
+    volumes:
+      - ./:/app
+
+  postgres:
+    container_name: vmanga_postgres
+    image: postgres
+    ports:
+      - "6543:5432"
+    environment:
+      POSTGRES_USER: vmanga
+      POSTGRES_PASSWORD: vmanga
+      POSTGRES_DB: vmanga
+      POSTGRES_HOST_AUTH_METHOD: password
+    volumes:
+      - db:/var/lib/postgresql/data
+
+volumes:
+  db:
+    driver: local

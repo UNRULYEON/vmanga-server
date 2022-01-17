@@ -10,7 +10,7 @@
   "scripts": {
     "build": "tsc && tsc-alias -p tsconfig.json",
     "start": "node build/index.js",
-    "dev": "ts-node-dev -r tsconfig-paths/register src/index.ts",
+    "dev": "ts-node-dev --rs --poll -r tsconfig-paths/register src/index.ts",
     "prepare": "husky install"
   },
   "dependencies": {
